@@ -15,6 +15,30 @@
         display: none;
       }
     }
+
+    /* Form element alignment improvements */
+    input[type="checkbox"],
+    input[type="radio"] {
+      vertical-align: middle;
+      margin: 0;
+      order: 2;
+      /* 让选择框显示在文字后面 */
+    }
+
+    label {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
   </style>
 </head>
 
@@ -85,9 +109,17 @@
       <td
         style="padding: 8px; border-right: 1px solid #000000; border-bottom: 1px solid #000000; background-color: #FFFFFF;"
         width="50%">
-        <span><strong>GENDER AT BIRTH:</strong> MALE <input type="radio" name="gender" value="male" required
-            style="margin: 0 4px;"> FEMALE <input type="radio" name="gender" value="female" required
-            style="margin: 0 4px;"></span>
+        <div class="form-group">
+          <strong>GENDER AT BIRTH:</strong>
+          <label>
+            MALE
+            <input type="checkbox" name="gender" value="male" required>
+          </label>
+          <label>
+            FEMALE
+            <input type="checkbox" name="gender" value="female" required>
+          </label>
+        </div>
       </td>
     </tr>
     <tr>
@@ -135,8 +167,16 @@
         <strong>FASTING REQUIREMENT:</strong>
       </td>
       <td style="padding: 8px; border: 1px solid #000000; background-color: #FFFFFF;">
-        FASTING <input type="radio" name="fasting" value="fasting" required style="margin: 0 4px;"> NON-FASTING <input
-          type="radio" name="fasting" value="non-fasting" required style="margin: 0 4px;">
+        <div class="form-group">
+          <label>
+            <input type="radio" name="fasting" value="fasting" required>
+            FASTING
+          </label>
+          <label>
+            <input type="radio" name="fasting" value="non-fasting" required>
+            NON-FASTING
+          </label>
+        </div>
       </td>
     </tr>
   </table>
