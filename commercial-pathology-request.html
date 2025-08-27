@@ -9,10 +9,30 @@
     @media print {
       body {
         margin: 0;
+        padding: 8px;
+        font-size: 10px;
+        line-height: 1.1;
       }
 
       .no-print {
         display: none;
+      }
+
+      .compact-table {
+        margin-top: 6px;
+      }
+
+      .compact-table td {
+        padding: 3px 4px;
+      }
+
+      .section-header {
+        font-size: 12px;
+        padding: 4px;
+      }
+
+      .compact-textarea {
+        height: 35px;
       }
     }
 
@@ -39,39 +59,69 @@
       gap: 8px;
       flex-wrap: wrap;
     }
+
+    /* Page optimization for single-page PDF */
+    body {
+      margin: 10px;
+      font-size: 11px;
+      line-height: 1.2;
+    }
+
+    .compact-table {
+      margin-top: 10px;
+    }
+
+    .compact-table td {
+      padding: 4px 6px;
+    }
+
+    .section-header {
+      font-size: 14px;
+      padding: 6px;
+    }
+
+    .compact-input {
+      font-size: 11px;
+    }
+
+    .compact-textarea {
+      height: 50px;
+    }
   </style>
 </head>
 
 <body
-  style="margin: 20px; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 1.4; color: #000000; background-color: #FFFFFF;">
+  style="margin: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 1.2; color: #000000; background-color: #FFFFFF;">
 
   <table style="width: 100%; border-collapse: collapse; max-width: 800px; margin: 0 auto;">
     <!-- Header Row -->
     <tr>
       <td style="width: 70%; vertical-align: top; padding: 0;">
-        <div style="font-size: 24px; font-weight: bold; margin-bottom: 0px;">
+        <div style="font-size: 20px; font-weight: bold; margin-bottom: 0px;">
           <div>COMMERCIAL PATHOLOGY</div>
           <div>REQUEST</div>
         </div>
       </td>
       <td style="width: 30%; vertical-align: top; padding: 0;">
         <div
-          style="width: 300px; height: 70px; background-color: #38763D; display: flex; align-items: center; justify-content: center; margin-left: auto;">
-          <span style="color: #FFFFFF; font-weight: bold; font-size: 14px;">LOGO LOCATION</span>
+          style="width: 300px; height: 50px; background-color: #38763D; display: flex; align-items: center; justify-content: center; margin-left: auto;">
+          <span style="color: #FFFFFF; font-weight: bold; font-size: 12px;">LOGO LOCATION</span>
         </div>
       </td>
     </tr>
   </table>
 
   <!-- Green Separator Line -->
-  <div style="width: 100%; height: 2px; background-color: #38763D; margin: 15px auto; max-width: 800px;"></div>
+  <div style="width: 100%; height: 2px; background-color: #38763D; margin: 8px auto; max-width: 800px;"></div>
 
   <!-- Patient Information Section -->
   <table
-    style="width: 100%; border-collapse: collapse; margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+    style="width: 100%; border-collapse: collapse; margin-top: 10px; max-width: 800px; margin-left: auto; margin-right: auto;"
+    class="compact-table">
     <tr>
       <td colspan="2"
-        style="background-color: #000000; color: #FFFFFF; text-align: center; font-weight: bold; font-size: 16px; padding: 8px; border: 1px solid #000000;">
+        style="background-color: #000000; color: #FFFFFF; text-align: center; font-weight: bold; font-size: 14px; padding: 6px; border: 1px solid #000000;"
+        class="section-header">
         PATIENT INFORMATION
       </td>
     </tr>
@@ -137,10 +187,12 @@
 
   <!-- Test Request Information Section -->
   <table
-    style="width: 100%; border-collapse: collapse; margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+    style="width: 100%; border-collapse: collapse; margin-top: 10px; max-width: 800px; margin-left: auto; margin-right: auto;"
+    class="compact-table">
     <tr>
       <td colspan="2"
-        style="background-color: #000000; color: #FFFFFF; text-align: center; font-weight: bold; font-size: 16px; padding: 8px; border: 1px solid #000000;">
+        style="background-color: #000000; color: #FFFFFF; text-align: center; font-weight: bold; font-size: 14px; padding: 6px; border: 1px solid #000000;"
+        class="section-header">
         TEST REQUEST INFORMATION
       </td>
     </tr>
@@ -159,7 +211,8 @@
       </td>
       <td style="padding: 8px; border: 1px solid #000000; background-color: #FFFFFF;">
         <textarea
-          style="width: 100%; height: 80px; border: none; outline: none; font-size: 12px; font-family: Arial, Helvetica, sans-serif; resize: none;"></textarea>
+          style="width: 100%; height: 50px; border: none; outline: none; font-size: 11px; font-family: Arial, Helvetica, sans-serif; resize: none;"
+          class="compact-textarea"></textarea>
       </td>
     </tr>
     <tr>
@@ -183,10 +236,12 @@
 
   <!-- Requesting Authority Section -->
   <table
-    style="width: 100%; border-collapse: collapse; margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+    style="width: 100%; border-collapse: collapse; margin-top: 10px; max-width: 800px; margin-left: auto; margin-right: auto;"
+    class="compact-table">
     <tr>
       <td colspan="2"
-        style="background-color: #000000; color: #FFFFFF; text-align: center; font-weight: bold; font-size: 16px; padding: 8px; border: 1px solid #000000;">
+        style="background-color: #000000; color: #FFFFFF; text-align: center; font-weight: bold; font-size: 14px; padding: 6px; border: 1px solid #000000;"
+        class="section-header">
         REQUESTING AUTHORITY
       </td>
     </tr>
@@ -252,10 +307,12 @@
 
   <!-- Collection Details Section -->
   <table
-    style="width: 100%; border-collapse: collapse; margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+    style="width: 100%; border-collapse: collapse; margin-top: 10px; max-width: 800px; margin-left: auto; margin-right: auto;"
+    class="compact-table">
     <tr>
       <td colspan="3"
-        style="background-color: #000000; color: #FFFFFF; text-align: center; font-weight: bold; font-size: 16px; padding: 8px; border: 1px solid #000000;">
+        style="background-color: #000000; color: #FFFFFF; text-align: center; font-weight: bold; font-size: 14px; padding: 6px; border: 1px solid #000000;"
+        class="section-header">
         COLLECTION DETAILS
       </td>
     </tr>
@@ -281,7 +338,7 @@
         <strong>CERTIFICATION:</strong>
       </td>
       <td style="width: 33.33%; padding: 8px; border: 1px solid #000000; background-color: #FFFFFF;">
-        <p style="margin: 0; font-size: 11px; line-height: 1.3;">
+        <p style="margin: 0; font-size: 10px; line-height: 1.2;">
           I certify that the accompanying sample was drawn from the above patient whose identity was confirmed by
           enquiry, and that I labelled the sample immediately following collection.
         </p>
@@ -300,7 +357,8 @@
       </td>
       <td colspan="2" style="padding: 8px; border: 1px solid #000000; background-color: #FFFFFF;">
         <textarea
-          style="width: 100%; height: 60px; border: none; outline: none; font-size: 12px; font-family: Arial, Helvetica, sans-serif; resize: none;"></textarea>
+          style="width: 100%; height: 40px; border: none; outline: none; font-size: 11px; font-family: Arial, Helvetica, sans-serif; resize: none;"
+          class="compact-textarea"></textarea>
       </td>
     </tr>
   </table>
